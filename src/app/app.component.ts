@@ -12,4 +12,8 @@ export class AppComponent {
   constructor() {
     this.titles = ['Fight Club', 'Revolver', 'Walter Mitty'];
   }
+
+  onPulsedAlert($event) {
+    console.log($event);
+  }
 }

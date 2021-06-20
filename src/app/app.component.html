@@ -1,5 +1,5 @@
 <app-greeting></app-greeting>
 <app-events></app-events>
-<app-alert [text]="titles[0]"></app-alert>
+<app-alert [text]="titles[0]" (pulsedAlert)="onPulsedAlert($event)"></app-alert>
 <app-alert [subtitle]="titles[1]"></app-alert>
 <app-alert text="message 2" subtitle="subtitle 2"></app-alert>
