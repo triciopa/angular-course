@@ -7,6 +7,7 @@ import { GreetingComponent } from './greeting/greeting.component';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { EventsComponent } from './events/events.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { EventsComponent } from './events/events.component';
     GreetingComponent,
     ParentComponent,
     ChildComponent,
-    EventsComponent
+    EventsComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule,

@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-course';
+  
+  titles: string[];
+
+  constructor() {
+    this.titles = ['Fight Club', 'Revolver', 'Walter Mitty'];
+  }
 }
