@@ -1,1 +1,15 @@
-<button (click)="onClick()">Click here!</button>
+<button (click)="onClick($event)">Console event</button>
+
+<select name="optionals" id="selection1" (change)="onChange($event)">
+  <option value="one">One</option>
+  <option value="two">Two</option>
+  <option value="three">Three</option>
+</select>
+
+<div class="square" (mouseenter)="onMouseEnter()" (mouseout)="onMouseOut()">
+  <p>{{ message }}</p>
+</div>
+
+<input type="text" (change)="onChangeInput($event)">
+<input type="text" (input)="onInput($event)">
+<!-- <input type="text" (focus)="onFocus()" (blur)="onBlur()"> -->
