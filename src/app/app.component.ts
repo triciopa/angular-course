@@ -9,11 +9,21 @@ export class AppComponent {
   
   titles: string[];
 
+  textField : string;
+
+  person: any;
+
   constructor() {
     this.titles = ['Fight Club', 'Revolver', 'Walter Mitty'];
+    this.textField = 'Start text'
+    this.person = {};
   }
 
   onPulsedAlert($event) {
     console.log($event);
+  }
+
+  onClick() {
+    this.textField = 'Changed text'
   }
 }

@@ -1,5 +1,24 @@
 <app-greeting></app-greeting>
+<hr>
+
 <app-events></app-events>
+<hr>
+
 <app-alert [text]="titles[0]" (pulsedAlert)="onPulsedAlert($event)"></app-alert>
 <app-alert [subtitle]="titles[1]"></app-alert>
 <app-alert text="message 2" subtitle="subtitle 2"></app-alert>
+<hr>
+
+<input type="text" [(ngModel)]="textField">
+<p>{{ textField }}</p>
+<button (click)="onClick()">Click</button>
+
+<div>
+  <input type="text" [(ngModel)]="person.fname">
+  <input type="text" [(ngModel)]="person.lname">
+  <input type="text" [(ngModel)]="person.age">
+</div>
+<p> My name is {{person.fname}} {{person.lname}} and I'm {{person.age}} years old </p>
+
+<hr>
+
