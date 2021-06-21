@@ -12,18 +12,21 @@ export class GreetingComponent implements OnInit {
   message: string;
   paragraph: string;
   inputId: string;
+  mainText: string;
 
   constructor() {
     this.message = 'Hello everybody';
     this.paragraph = 'mainParagraph';
     this.inputId = 'text';
-    
+    this.mainText = 'Initial Text';
+
 
     setTimeout(() => {
       this.message = 'Goodbye for now!';
       this.paragraph = 'changedParagraph';
-      this.inputId = 'password';
+      this.inputId = 'password';      
     }, 3000);
+
    }
 
    showGreeting(): string {
@@ -31,6 +34,12 @@ export class GreetingComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    let count = 0;
+    setInterval(() => {
+      count <= 3
+      ? this.mainText = `Text  ${count++}`
+      : null;
+    }, 2000)
   }
 
 }
