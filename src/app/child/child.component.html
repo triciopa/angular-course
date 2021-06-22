@@ -12,6 +12,20 @@
   <button (click)="changeClass('transform')">Transform</button>
   <button (click)="changeClass('border')">Border</button>
   <span>Choose a class</span>
+  <br>
+  <p *ngIf="false">This text will not show up on render</p>
+
+  <p *ngIf="true; then mainBlock">This text will never show up, because of "then"</p>
+  <ng-template #mainBlock>
+    <p>This text will show because a then condition is true</p>
+  </ng-template>
+  <p *ngIf="showP; else elseBlock">This text will toggle on with the button below</p>
+
+  <ng-template #elseBlock>
+    <p>This text will show only when the other is hidden. Click the button:</p>
+  </ng-template>
+   
+  <button (click)="showText()">Show / Hide</button>
 </div>
 
 <div>
@@ -31,4 +45,40 @@
    (change)="onRange($event)">
   <p>Modify the font-size</p>
 
+</div>
+
+<div>
+  <h2>For loops</h2>
+  <ul>
+    <li *ngFor="let person of people">
+      {{ person.fname }} {{ person.lname }} - {{ person.age }}
+    </li>
+  </ul>
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let person of people">
+        <td>{{ person.fname }}</td>
+        <td>{{ person.lname }}</td>
+        <td>{{ person.address }}</td>
+        <td>{{ person.phone }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div [ngSwitch]="optionNumber">
+  <p *ngSwitchCase="1">Option 1</p>
+  <p *ngSwitchCase="2">Option 2</p>
+  <p *ngSwitchCase="3">Option 3</p>
+  <p *ngSwitchCase="4">Option 4</p>
+  <p *ngSwitchDefault>Default option (only from 1 to 4)</p>
+  <input type="number" min=0 max=5 [(ngModel)]="optionNumber">
 </div>
