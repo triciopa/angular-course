@@ -1,1 +1,34 @@
 <h3>Soy el hijo</h3>
+<p [ngStyle]="{color: 'red', fontSize: '12px'}">
+  Reprehenderit exercitation fugiat sunt esse incididunt.
+  Ad cillum magna eiusmod eiusmod sit consequat.
+</p>
+<div>
+  <p [ngClass]="classProp">
+    This text will toggle the classes pushed in buttons</p>
+  <p [ngClass]="{ back: (selectedClass === 'back'), transform: (selectedClass === 'transform'), border: (selectedClass === 'border')}">
+    This text will only takes the last class of which its button was pulsed</p>
+  <button (click)="changeClass('back')">Back</button>
+  <button (click)="changeClass('transform')">Transform</button>
+  <button (click)="changeClass('border')">Border</button>
+  <span>Choose a class</span>
+</div>
+
+<div>
+  <p [ngStyle]="parProp">
+    Reprehenderit exercitation fugiat sunt esse incididunt.
+    Ad cillum magna eiusmod eiusmod sit consequat.
+  </p>
+  <button (click)="changeColor('g')">Green</button>
+  <button (click)="changeColor('o')">Orange</button>
+  <button (click)="changeColor('p')">Purple</button>  
+  <div>
+    <input type="text" [(ngModel)]="parProp.color">
+    <span>Input a color name or hex code</span> 
+  </div>
+  <input type="range" min="18" max="48" step="2"
+   [value]="parProp.fontSize.slice(0,-2)"
+   (change)="onRange($event)">
+  <p>Modify the font-size</p>
+
+</div>
