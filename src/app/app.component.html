@@ -20,6 +20,13 @@
   <input type="text" [(ngModel)]="person.age">
 </div>
 <p> My name is {{person.fname}} {{person.lname}} and I'm {{person.age}} years old </p>
-
 <hr>
+
+<h2>Directives</h2>
+<p underline [config]="{ colorHover: 'yellow', colorNoHover: 'blue'}">Underlined paragraph with a directive that also changes color
+  on mouse over and restores it on mouse out.
+</p>
+<p [underline]="{ colorHover: 'red', colorNoHover: 'white'}">Underlined paragraph with a directive that also changes color
+  on mouse over and restores it on mouse out. Different input config.
+</p>
 

@@ -9,6 +9,7 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { EventsComponent } from './events/events.component';
 import { AlertComponent } from './alert/alert.component';
+import { UnderlineDirective } from './directives/underline.directive';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { AlertComponent } from './alert/alert.component';
     ParentComponent,
     ChildComponent,
     EventsComponent,
-    AlertComponent
+    AlertComponent,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,
