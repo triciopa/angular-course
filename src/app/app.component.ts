@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +9,13 @@ import { Component } from '@angular/core';
 export class AppComponent {
   
   titles: string[];
-
   textField : string;
-
   person: any;
 
-  constructor() {
+  constructor(private router: Router) {
     this.titles = ['Fight Club', 'Revolver', 'Walter Mitty'];
     this.textField = 'Start text'
-    this.person = {};
+    this.person = {};    
   }
 
   onPulsedAlert($event) {
@@ -25,5 +24,9 @@ export class AppComponent {
 
   onClick() {
     this.textField = 'Changed text'
+  }
+
+  onLink(pRoute: string) {    
+    this.router.navigate([pRoute])
   }
 }

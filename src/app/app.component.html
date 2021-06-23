@@ -1,9 +1,22 @@
-<app-greeting></app-greeting>
-<hr>
+<div class="buttons">
+  <button [routerLink]="['/greeting']" routerLinkActive="active">Greeting</button>
+  <button [routerLink]="['/events']" routerLinkActive="active">Events</button>
+  <button [routerLink]="['/parent']" routerLinkActive="active">Parent</button>
+  <button [routerLink]="['/child']" routerLinkActive="active">Child</button>
+</div>
 
-<app-events></app-events>
-<hr>
+<div class="links">
+  <a (click)="onLink('greeting')">Greeting</a>
+  <a (click)="onLink('events')">Events</a>
+  <a (click)="onLink('parent')">Parent</a>
+  <a (click)="onLink('child')">Child</a>
+</div>
 
+<hr>
+<router-outlet></router-outlet>
+
+<hr>
+<h2> Alerts </h2>
 <app-alert [text]="titles[0]" (pulsedAlert)="onPulsedAlert($event)"></app-alert>
 <app-alert [subtitle]="titles[1]"></app-alert>
 <app-alert text="message 2" subtitle="subtitle 2"></app-alert>
