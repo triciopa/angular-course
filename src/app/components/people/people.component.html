@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Surname</th>
+    <th>Age</th>
+    <th>Active</th>
+  </tr>
+  <tr *ngFor="let person of people">
+    <td>{{ person.fname }}</td>
+    <td>{{ person.lname }}</td>
+    <td>{{ person.age }}</td>
+    <td>{{ person.active }}</td>
+  </tr>
+</table>
+<button (click)="onClick()">Add person</button>
+<button (click)="onClickActives()">See actives</button>

@@ -14,6 +14,7 @@ import { EmployeeComponent } from './components/employee/employee.component';
 import { ProyectsComponent } from './components/proyects/proyects.component';
 import { ResumeComponent } from './components/resume/resume.component';
 import { ExperienceComponent } from './components/experience/experience.component';
+import { PeopleComponent } from './components/people/people.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { ExperienceComponent } from './components/experience/experience.componen
     EmployeeComponent,
     ProyectsComponent,
     ResumeComponent,
-    ExperienceComponent
+    ExperienceComponent,
+    PeopleComponent
   ],
   imports: [
     BrowserModule,
